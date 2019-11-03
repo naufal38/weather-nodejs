@@ -4,10 +4,10 @@ const forecast= (lat,long,callback)=>{
     const url = 'https://api.darksky.net/forecast/cc8062d09cc31afdfbd7789cd2beb3e6/' + encodeURIComponent(lat) + ','+ encodeURIComponent(long)+'?units=si';
     request({url, json:true},(error,{body})=>{
         if (error){
-            callback('Unable to connect!',undefined)
+            callback('Tidak Dapat Terkoneksi!',undefined)
         }
         else if (body.error){
-            callback('Unable to find the location!',undefined)
+            callback('Lokasi Tidak Ditemukan!',undefined)
 
         }
         else{

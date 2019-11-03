@@ -8,7 +8,7 @@ const message2 = document.querySelector('#message-2');
 
 weatherform.addEventListener('submit',(e)=>{
     e.preventDefault();
-    message1.textContent = 'Fetching Weather....'
+    message1.textContent = 'Mengambil Data....'
     message2.textContent = ''
     const location = search.value;
     fetch('/weather?address='+location).then((response)=>{

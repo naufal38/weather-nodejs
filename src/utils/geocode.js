@@ -6,10 +6,10 @@ const geocode = (address,callback)=>{
     request({url, json:true},(error,{body}={})=>{
 
         if (error){
-            callback('Unable To Connect!',undefined)
+            callback('Gagal Menyambung Ke Internet!',undefined)
         }
         else if(body.features.length === 0){
-            callback('Unable To Find Location!',undefined)
+            callback('Lokasi Tidak Ditemukan!',undefined)
         }
         else{
 
