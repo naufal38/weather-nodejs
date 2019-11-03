@@ -11,7 +11,7 @@ const forecast= (lat,long,callback)=>{
 
         }
         else{
-            callback(undefined,' Suhu Sekarang '+ body.currently.temperature + ' Derajat.' + ' Dengan Probabilitas Hujan '+ body.currently.precipProbability + ' Persen')
+            callback(undefined,' Suhu Sekarang '+ body.currently.temperature + ' Derajat Celcius.' + ' Dengan Probabilitas Hujan '+ body.currently.precipProbability + ' % . Kecepatan Angin '+ body.currently.windSpeed +' Suhu Tertinggi Hari Ini ' + body.daily.data[0].temperatureHigh + 'Derajat Celcius. Dengan Suhu Terendah Hari Ini '+ body.daily.data[0].temperatureLow)
         }
     })
 };
